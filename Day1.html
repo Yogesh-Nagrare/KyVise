@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://www.coderarmy.in/"><img src="./Coderarmy.png" height="100" width="200" alt="Coderarmy Logo"></a>
+
+<pre align="center">
+  <h1>↓</h1>  <a href="./Day1.html"><img src="./day1logo.png" alt="1" height="50" width="70"></a>    <a href="./Day2.html"><img src="./day2logo.png" alt="" height="50" width="70"></a>    <a href="./Day3.html"><img src="./day3logo.png" alt="" height="50" width="70"></a>    <a href="./Day4.html"><img src="./day4logo.png" alt="" height="50" width="70"></a>    <a href="./Day5.html"><img src="./day5logo.png" alt="" height="50" width="70"></a>    <a href="./Day6.html"><img src="./day6logo.png" alt="" height="50" width="70"></a>
+</pre>
+  <hr>
+    <h1 align="center">Web Development Course</h1>
+<hr>
+<div align="center">
+  
+  <iframe src="https://www.youtube.com/embed/1pcikNlDB-4" frameborder="0"width="560" 
+  height="315"   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+</div>
+<hr>
+  <h2>How Does Internet Work</h2>
+  <img src="./Datatransfer.png" alt="">
+
+  <h3>Principle 1: The Need to Share Information</h3>
+  <p>
+    The most fundamental truth is that we have information on one computer (Computer A) and we want it to be on another computer (Computer B). 
+    These computers are not in the same room.
+  </p>
+  <p>
+    The simplest way is to carry the information physically (USB stick), but it’s slow and doesn’t scale. 
+    A better way is to run a cable and send signals as <strong>1s and 0s</strong>, creating a <strong>direct link</strong>.
+  </p>
+
+  <h3>Principle 2: The Problem of Scale</h3>
+  <p>
+    Connecting multiple computers directly requires too many cables. 
+    Solution: Use a central device called a <strong>Switch</strong>. This forms a <strong>Local Network</strong>.
+  </p>
+
+  <h3>Principle 3: The Problem of Connecting Networks</h3>
+  <p>
+    To connect different local networks, we use a <strong>Router</strong>. 
+    The Internet is a <strong>network of networks</strong> connected by routers.
+  </p>
+
+  <h3>Principle 4: The Problem of Finding Anyone (Addressing)</h3>
+  <p>
+    Every device needs a unique identifier called an <strong>IP Address</strong>. 
+    Routers use IPs to forward packets step by step.
+  </p>
+
+  <h3>Principle 5: The Problem of Reliability and Fairness</h3>
+  <p>
+    Large data is split into <strong>Packets</strong>. Each contains source, destination, and order number. 
+    Protocols like <strong>TCP/IP</strong> ensure reliable delivery.
+  </p>
+
+  <h3>Summary from First Principles</h3>
+  <ol>
+    <li>Direct physical link between two computers.</li>
+    <li>Local network with a switch.</li>
+    <li>Internetwork with routers.</li>
+    <li>Unique addressing with IP addresses.</li>
+    <li>Reliable transfer using TCP/IP packets.</li>
+  </ol>
+
+<hr>
+  <h2>IP Address</h2>
+  <p>
+    <strong>IPv4:</strong> 32-bit number, about 4.3 billion addresses. Example: 172.217.16.142.<br>
+    <strong>Problem:</strong> Limited addresses → led to <strong>Public & Private IPs</strong>.
+  </p>
+
+  <h3>Public IP Address</h3>
+  <ul>
+    <li>Unique global address assigned by ISP.</li>
+    <li>Used by servers (Google, Netflix, etc.).</li>
+    <li>Your router has one public IP.</li>
+  </ul>
+
+  <h3>Private IP Address</h3>
+  <ul>
+    <li>Used only inside local networks (e.g., 192.168.x.x).</li>
+    <li>Not globally unique.</li>
+    <li>Assigned by router to devices.</li>
+  </ul>
+<hr>
+  <h2>IPv6</h2>
+  <p>
+    <strong>IPv6:</strong> 128-bit address (~340 undecillion addresses).<br>
+    Written in hexadecimal, separated by colons. Example: <code>2001:0db8:85a3:0000:0000:8a2e:0370:7334</code>.
+  </p>
+<hr>
+  <h2>MAC Address</h2>
+  <p>
+    A unique <strong>48-bit</strong> number burned into hardware. Display formats:
+  </p>
+  <ul>
+    <li>Colon-separated: 3C:22:FB:A3:B4:C5</li>
+    <li>Hyphen-separated: 3C-22-FB-A3-B4-C5</li>
+    <li>Period-separated: 3c22.fba3.b4c5</li>
+  </ul>
+<hr>
+  <h3>Finding MAC Address</h3>
+  <p><strong>Windows:</strong> Use <code>ipconfig /all</code> or <code>getmac /v</code> in Command Prompt.</p>
+  <p><strong>MacOS:</strong> Use <code>ifconfig</code> in Terminal.</p>
+<hr>
+  <h2>Port Number</h2>
+  <p>
+    Ports identify services on a device. Range: <strong>0–65535</strong> (16-bit).
+  </p>
+
+  <h3>Categories of Ports</h3>
+  <ol>
+    <li><strong>Well-Known Ports (0–1023):</strong> HTTP (80), HTTPS (443), SSH (22), FTP (21), DNS (53).</li>
+    <li><strong>Registered Ports (1024–49151):</strong> React/Node (3000), MySQL (3306), MongoDB (27017).</li>
+    <li><strong>Dynamic/Ephemeral Ports (49152–65535):</strong> Temporary ports assigned to clients.</li>
+  </ol>
+<hr>
+  <h2>DNS (Domain Name System)</h2>
+  <p>
+    DNS translates domain names into IP addresses.
+  </p>
+
+  <h3>Steps of DNS Resolution</h3>
+  <ol>
+    <li><strong>Check local cache:</strong> Browser → OS → Router.</li>
+    <li><strong>Recursive Resolver:</strong> ISP or public resolver (Google 8.8.8.8, Cloudflare 1.1.1.1).</li>
+    <li><strong>Root Servers:</strong> Tell where TLD servers are (.com, .org, etc.).</li>
+    <li><strong>TLD Servers:</strong> Direct to authoritative name servers.</li>
+    <li><strong>Authoritative Servers:</strong> Provide the actual IP address.</li>
+  </ol>
+
+  <p>
+    Once resolved, the browser connects to the IP on the correct port (e.g., 443 for HTTPS).
+  </p>
+  <img src="./cdn.png" alt="">
+<br>
+<hr>
+  <h1>→Also Refer this Handwritten Notes</h1>
+<div>
+  <img src="./intro1.jpeg" alt="intro1">
+  <img src="./intro2.jpeg" alt="intro2">
+  <img src="./intro3.jpeg" alt="intro3">
+  <img src="./intro4.jpeg" alt="intro4">
+  <img src="./intro5.jpeg" alt="intro5">
+  <img src="./intro6.jpeg" alt="intro6">
+</div>
+
+<div align="center">
+  <h1>RESOURCES TO REFER</h1>
+  <pre>
+    <a href="https://www.w3schools.com/html/"><img src="./w3school.png" alt="w3" height="70px" width="70px"></a>      <a href="https://www.youtube.com/@CoderArmy9"><img src="./coderarmy.png" alt="w3" height="70px" width="100px"></a>
+  </pre>
+</div>
+<hr>
+<pre align="center">
+  <a href="./Day1.html"><img src="./day1logo.png" alt="1" height="50" width="70"></a>    <a href="./Day2.html"><img src="./day2logo.png" alt="" height="50" width="70"></a>    <a href="./Day3.html"><img src="./day3logo.png" alt="" height="50" width="70"></a>    <a href="./Day4.html"><img src="./day4logo.png" alt="" height="50" width="70"></a>    <a href="./Day5.html"><img src="./day5logo.png" alt="" height="50" width="70"></a>    <a href="./Day6.html"><img src="./day6logo.png" alt="" height="50" width="70"></a>
+</pre>
+<hr>
+</body>
+</html>

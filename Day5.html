@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Registration Form Notes</title>
+</head>
+<body>
+    <a href="https://www.coderarmy.in/"><img src="./Coderarmy.png" height="100" width="200" alt="Coderarmy Logo"></a>
+ 
+<pre align="center">
+  <h1>↓</h1>  <a href="./Day1.html"><img src="./day1logo.png" alt="1" height="50" width="70"></a>    <a href="./Day2.html"><img src="./day2logo.png" alt="" height="50" width="70"></a>    <a href="./Day3.html"><img src="./day3logo.png" alt="" height="50" width="70"></a>    <a href="./Day4.html"><img src="./day4logo.png" alt="" height="50" width="70"></a>    <a href="./Day5.html"><img src="./day5logo.png" alt="" height="50" width="70"></a>    <a href="./Day6.html"><img src="./day6logo.png" alt="" height="50" width="70"></a>
+</pre>
+    <hr>
+    <div align="center">
+    <iframe 
+        width="560" 
+        height="315" 
+        src="    https://www.youtube.com/embed/a4j9R_DvZ8M
+" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+</div>
+<hr>
+    <div>
+    <h1>1.Form Tag</h1>
+    <ul>
+        <li>A form is used to collect user input.</li>
+        <li>It groups together input fields, labels, checkboxes, radio buttons, etc.</li>
+        <li>Attributes:
+            <ul>
+                <li>action → where the form data will be sent (e.g., server URL).</li>
+                <li>method → how data will be sent (GET or POST).</li>
+            </ul>
+        </li>
+    </ul>
+    <img src="./formsyntax.png" alt="">
+    </div>
+    <div>
+        <h1>2.Label</h1>
+        <ul>
+            <li>label is connected to an in put using the for attribute.</li>
+            <li>The value of for must match the input’s id.</li>
+            <li>Benefit: Clicking the label focuses the input box.</li>
+        </ul>
+        <p><h3>Working</h3>: “browser tab pe sirf name aur value dikte hai aur for id sirf label aur input me connection hai ye dikhata hai”
+        <br>
+            Perfect Logic: The name-value pair goes to the backend, and for-id only connects label ↔ input.</p>
+        <p>ID should always be unique.</p>
+        <img src="./label.png" alt="">
+    </div>
+    <div>
+        <h1>4.Radio Buttons</h1>
+        <ul>
+         <li>Used when only one option should be selected.</li>
+         <li>All radio buttons in a group should have the same name.</li>
+        </ul>
+        <img src="./radio.png" alt="">
+    </div>
+    <div>
+        <h1>5.File Updated</h1>
+        <img src="./upload.png" alt="">
+
+    </div>
+    <div>
+        <h1>6.Dropdown(select tag)</h1>
+        <ul>
+            <li>select tagcreates a dropdown menu.
+            <li>option tag defines choices.</li>
+        </ul>
+        <img src="./dropdown.png" alt="">
+    </div>
+    <div>
+        <h1>7.Checkboxes</h1>
+        <ul>
+            <li>Allow multiple selections.</li>
+            <li>Each checkbox has its own id and value.</li>
+        </ul>
+        <img src="./checkbox.png" alt="">
+    </div>
+    <div>
+        <h1>Buttons</h1>
+        <ul>
+            <li>Submit Button: Sends the form data.</li>
+            <li>Reset Button: Clears all inputs.</li>
+        </ul>
+        <img src="./button.png" alt="">
+    </div>
+
+
+<br><br>
+    <hr>
+    <h1>Full Example using Form</h1>
+    <h1>📌 University Registration Form (with Notes)</h1>
+    <p>This page explains each part of the form with comments and examples.</p>
+    <hr>
+
+    <form action="">
+        <!-- ------------------ Heading Section ------------------ -->
+        <h2>Personal Details</h2>
+        <p>Please fill out your personal details below:</p>
+
+        <!-- Label + Input for First Name -->
+        <!-- 'for' attribute of label connects to input's 'id' -->
+        <label for="fname">First Name:</label>
+        <input type="text" name="userfname" id="fname">
+
+        <!-- Last Name -->
+        <label for="lname">Last Name:</label>
+        <input type="text" name="userlname" id="lname">
+        <br><br>
+
+        <!-- Date of Birth -->
+        <!-- type="date" shows calendar picker -->
+        <label for="date">Date of Birth:</label>
+        <input type="date" name="bdate" id="date">
+        <br><br>
+
+        <!-- Gender Selection -->
+        <!-- 'name' is same for all radio buttons so only one can be chosen -->
+        <label>Gender:</label>
+        <input type="radio" id="male" name="usergender" value="male"> Male
+        <input type="radio" id="female" name="usergender" value="female"> Female
+        <input type="radio" id="other" name="usergender" value="other"> Other
+        <br><br>
+
+        <!-- File Upload -->
+        <!-- type="file" allows uploading files (photo, documents etc.) -->
+        <label for="photo">Upload Your Photo:</label>
+        <input type="file" name="userphoto" id="photo">
+        <br><br>
+
+        <!-- Email Input -->
+        <!-- type="email" ensures proper email format -->
+        <label for="email">Email:</label>
+        <input type="email" name="useremail" id="email">
+        <br><br>
+
+        <!-- Phone Number -->
+        <!-- type="number" only accepts numbers -->
+        <label for="phone">Phone:</label>
+        <input type="number" id="phone" name="userphone">
+        <br><br>
+
+        <!-- Address -->
+        <!-- textarea is for multi-line input -->
+        <label for="mailadd">Mailing Address:</label>
+        <textarea id="mailadd" name="useraddress" rows="5" cols="25"></textarea>
+        <br><br>
+
+        <hr>
+
+        <!-- ------------------ Academic Details ------------------ -->
+        <h2>Academic Details</h2>
+
+        <!-- Dropdown Select -->
+        <!-- select = dropdown box, options = choices -->
+        <label for="opt">Select your Course:</label>
+        <select name="usercourses" id="opt">
+            <option value="bsc">B.Sc</option>
+            <option value="msc">M.Sc</option>
+            <option value="phd">PhD</option>
+        </select>
+        <br><br>
+
+        <!-- Checkboxes -->
+        <!-- Multiple checkboxes can be selected -->
+        <label>Choose Interests:</label><br>
+        <input type="checkbox" name="sports" id="sports">
+        <label for="sports">Sports</label>
+
+        <input type="checkbox" name="coding" id="coding">
+        <label for="coding">Coding</label>
+
+        <input type="checkbox" name="dsa" id="dsa">
+        <label for="dsa">DSA</label>
+        <br><br>
+
+        <!-- Terms & Conditions -->
+        <!-- Must be checked before submission -->
+        <input type="checkbox" name="terms" id="terms">
+        <label for="terms">I agree to the terms and conditions</label>
+        <br><br>
+
+        <!-- Submit & Reset -->
+        <!-- Submit = send form data -->
+        <!-- Reset = clear form fields -->
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+    
+<div align="center">
+  <h1>RESOURCES TO REFER</h1>
+  <pre>
+    <a href="https://www.w3schools.com/html/"><img src="./w3school.png" alt="w3" height="70px" width="70px"></a>      <a href="https://www.youtube.com/@CoderArmy9"><img src="./coderarmy.png" alt="w3" height="70px" width="100px"></a>
+  </pre>
+</div>
+<hr>
+<pre align="center">
+  <a href="./Day1.html"><img src="./day1logo.png" alt="1" height="50" width="70"></a>    <a href="./Day2.html"><img src="./day2logo.png" alt="" height="50" width="70"></a>    <a href="./Day3.html"><img src="./day3logo.png" alt="" height="50" width="70"></a>    <a href="./Day4.html"><img src="./day4logo.png" alt="" height="50" width="70"></a>    <a href="./Day5.html"><img src="./day5logo.png" alt="" height="50" width="70"></a>    <a href="./Day6.html"><img src="./day6logo.png" alt="" height="50" width="70"></a>
+</pre>
+<hr>
+</body>
+</html>
